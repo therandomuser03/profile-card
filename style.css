@@ -1,7 +1,8 @@
 * {
-    margin: auto;
+    margin: 0;
     padding: auto;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 main {
-    width: min(95%, 600px);
+    width: min(95%, 800px);
     background-color: #141414;
     border-radius: 16px;
     display: flex;
@@ -33,6 +34,7 @@ section {
 }
 
 article {
+    background-color: #202020;
     width: 60%;
     padding: 20px;
     display: flex;
@@ -54,8 +56,8 @@ article {
 }
 
 img {
-    width: 150px;
-    height: 150px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     border: 2px solid #ffffff;
     object-fit: cover;
@@ -68,7 +70,7 @@ img {
     margin-left: 20px;
 }
 
-button {
+.button {
     background-color: #f5f5f5;
     width: 80%;
     height: 45px;
@@ -77,15 +79,26 @@ button {
     font-size: 16px;
     border-radius: 8px;
     color: #111;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button:hover{
+    background-color: #bebebe;
 }
 
 @media screen and (max-width: 550px) {
     main {
         flex-direction: column;
     }
-    article,.image,button{
-        text-align: center;
+    article,.image{
+        text-align: left;
         margin: 0 auto;
+        gap: 25px;
+    }
+    button{
+        text-align: center;
+        margin: 0;
         gap: 25px;
     }
     article,.socials{
